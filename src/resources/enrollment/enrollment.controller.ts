@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Get } from '@nestjs/common';
 import { EnrollmentService } from './enrollment.service';
 import { CreateEnrollmentDTO } from 'src/dtos/create-enrollment.dto';
 import { Enrollment } from '@prisma/client';
@@ -10,5 +10,10 @@ export class EnrollmentController {
   @Post()
   createEnrollment(@Body() body: CreateEnrollmentDTO): Promise<Enrollment> {
     return this.enrollmentService.createEnrollment(body);
+  }
+
+  @Get()
+  listEnrollments() {
+    return this.enrollmentService.listEnrollments();
   }
 }

@@ -20,4 +20,10 @@ export class EnrollmentService {
 
     return enrollment;
   }
+
+  async listEnrollments(): Promise<Enrollment[]> {
+    const enrollments = await this.prisma.enrollment.findMany();
+
+    return enrollments;
+  }
 }
