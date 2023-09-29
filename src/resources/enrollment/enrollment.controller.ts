@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get } from '@nestjs/common';
+import { Body, Controller, Post, Get, Delete, Param } from '@nestjs/common';
 import { EnrollmentService } from './enrollment.service';
 import { CreateEnrollmentDTO } from 'src/dtos/create-enrollment.dto';
 import { Enrollment } from '@prisma/client';
@@ -15,5 +15,11 @@ export class EnrollmentController {
   @Get()
   listEnrollments() {
     return this.enrollmentService.listEnrollments();
+  }
+
+  @Delete(':id')
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  deleteEnrollments(@Param('id') id: string) {
+    return this.enrollmentService.deleteEnrollments(id);
   }
 }
