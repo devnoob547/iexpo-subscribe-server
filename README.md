@@ -11,6 +11,6 @@ Create a registration for the IEXPO cultural sample, with the aim of controlling
 
 ### TO DO
 
-- [] Create modules for registrations
-- [] Connect prisma
-- [] Create routes
+- [x] Create modules for registrations
+- [x] Connect prisma
+- [x] Create routes
