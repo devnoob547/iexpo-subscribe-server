@@ -51,3 +51,5 @@ Route with methods: GET, POST and DELETE. To create subscriptions, list them and
 ### Author
 ---
 Feito com ❤️ por Daniel Alves Entre em contato!
+
+<p><b>OBS:</b> This project is still in the development phase, it has not been completely refactored. If you want to contribute to the project, just send me a PR</p>
